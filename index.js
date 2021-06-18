@@ -302,12 +302,7 @@ let checkWinner = () => {
 /*************** GAME RESTART FUNCTION ***************/
 
 let gameRestart = () => {
-  // restartGame.innerHTML = `<span id = "restart-btn">RESTART GAME</span>`;
-  // document
-  //   .getElementById("restart-btn")
-  //   .addEventListener("click", () => window.location.reload());
-
-  restartGame.innerHTML = `<span id = "restart-btn">RESTART GAME</span>`;
+  restartGame.innerHTML = `<span id = "restart-btn">PLAY AGAIN</span>`;
 
   document.getElementById("restart-btn").addEventListener("click", () => {
     gameGrid.innerText = "";
@@ -322,88 +317,3 @@ let gameRestart = () => {
   });
 };
 gameRestart();
-
-/*************** WINNING LOGIC CHECK WITH CLICK EVENT ***************/
-
-// console.log(e.path[1].children[0].innerText);
-// console.log(e.path[1].children);
-// console.log(gameGrid.querySelectorAll(".grid-row").length);
-// let userX = 0;
-// let userO = 0;
-// let diagonalLeftX = 0;
-// let diagonalLeftO = 0;
-// let diagonalRightX = 0;
-// let diagonalRightO = 0;
-// let lastItem = document.querySelectorAll(".grid-row").length;
-// // console.log(lastItem);
-
-// for (let i = 0; i < e.path[1].children.length; i++) {
-//   // console.log(i);
-//   // console.log(e.path);
-//   // console.log(e);
-//   let userColX = 0;
-//   let userColO = 0;
-
-//   if (e.path[1].children[i].innerText === "X") {
-//     userX++;
-//     if (userX === 3) {
-//       console.log("User X Wins!");
-//     }
-//   } else if (e.path[1].children[i].innerText === "O") {
-//     userO++;
-//     if (userO === 3) {
-//       console.log("User O Wins!");
-//     }
-//   }
-
-//   if (
-//     document.getElementById(`grid-item-${i + 1}-${i + 1}`).innerText == "X"
-//   ) {
-//     diagonalLeftX++;
-//     console.log("diagonal left X:", diagonalLeftX);
-//     if (diagonalLeftX === 3) {
-//       console.log("Diagonal X user Wins");
-//     }
-//   } else if (
-//     document.getElementById(`grid-item-${i + 1}-${i + 1}`).innerText == "O"
-//   ) {
-//     diagonalLeftO++;
-//     console.log("diagonal left O:", diagonalLeftO);
-//     if (diagonalLeftO === 3) {
-//       console.log("Diagonal O user Wins");
-//     }
-//   }
-//   // lastItem--;
-//   console.log("---last item", lastItem);
-//   if (e.path[1].children[lastItem--].innerText == "X") {
-//     diagonalRightX++;
-
-//     if (diagonalRightX === 3) {
-//       console.log("Diagonal Right X user Wins");
-//     }
-
-//     console.log("last item:", lastItem);
-//   }
-
-//   for (let j = 0; j < e.path[2].children.length; j++) {
-//     if (
-//       document.getElementById(`grid-item-${j + 1}-${i + 1}`).innerText ==
-//       "X"
-//     ) {
-//       userColX++;
-//       console.log("user col x:", userColX);
-//       if (userColX === 3) {
-//         console.log("User X Wins in Col");
-//       }
-//     } else if (
-//       document.getElementById(`grid-item-${j + 1}-${i + 1}`).innerText ==
-//       "O"
-//     ) {
-//       userColO++;
-//       console.log("user col O:", userColO);
-//       if (userColO === 3) {
-//         console.log("User O Wins in Col");
-//       }
-//     }
-//   }
-// }
